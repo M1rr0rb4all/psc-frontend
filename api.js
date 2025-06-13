@@ -1,7 +1,3 @@
-import axios from 'axios'
+import api from './api'
 
-const api = axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL
-})
-
-export default api
+const response = await api.get(`/ownership-structure/?company_name=${companyName}`)
